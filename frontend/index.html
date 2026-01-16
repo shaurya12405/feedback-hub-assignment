@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Feedback Hub Dashboard</title>
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1 class="page-title">Feedback Hub Dashboard</h1>
+
+  <!-- Submit Feedback Card -->
+  <div class="card">
+    <h2>Submit Feedback</h2>
+
+    <div class="form-row">
+      <select id="product">
+        <option value="ring_01">Ring</option>
+        <option value="earring_01">Earrings</option>
+        <option value="necklace_01">Necklace</option>
+      </select>
+
+      <input type="number" id="rating" min="1" max="5" placeholder="Rating (1–5)">
+    </div>
+
+    <textarea id="review" placeholder="Write your review"></textarea>
+
+    <button onclick="submitFeedback()">Submit</button>
+  </div>
+
+  <!-- Charts Row -->
+  <div class="card-row">
+
+    <div class="card">
+      <h2>Sentiment Distribution</h2>
+      <div class="chart-container small">
+        <canvas id="sentimentChart"></canvas>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Theme Counts</h2>
+      <label>Select Product:</label>
+      <select id="themeProduct" onchange="loadProductThemes()">
+        <option value="ring_01">Ring</option>
+        <option value="earring_01">Earrings</option>
+        <option value="necklace_01">Necklace</option>
+      </select>
+      <div class="chart-container medium">
+        <canvas id="themeChart"></canvas>
+      </div>
+    </div>
+
+  </div>
+
+  <!--Insights Card -->
+  <div class="card">
+    <h2>Insights</h2>
+    <button onclick="generateInsights()">Generate Insights</button>
+    <ul id="insights"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
