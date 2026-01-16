@@ -1,6 +1,6 @@
-# Feedback Hub – Internship Assignment
+# Feedback Hub – GIVA Internship Assignment
 
-This project is a simple feedback analysis system built as part of an internship assignment.
+This project is a simple feedback analysis system.
 
 Users can submit product feedback, and the system analyzes sentiment, detects themes, and shows insights on a dashboard.
 
